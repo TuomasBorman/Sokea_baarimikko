@@ -7,7 +7,11 @@ import java.io.Serializable;
  *
  */
 public class Tulos  implements Serializable {
-    private int tulos;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int tulos;
     private String nimi;
 
     public int annaTulos() {

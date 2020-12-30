@@ -60,7 +60,8 @@ public class Tulostaulu {
     /**
      * Metodin avulla ladataan tuloksia sisaltava tiedosto. Tiedoston tiedot tallennetan tulokset-listaan.
      */
-    public void lataaTiedosto() {
+    @SuppressWarnings("unchecked")
+	public void lataaTiedosto() {
         try {
             inputStream = new ObjectInputStream(new FileInputStream(tulostaulu_tiedosto));
             tulokset = (ArrayList<Tulos>) inputStream.readObject();
