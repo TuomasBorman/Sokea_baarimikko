@@ -94,16 +94,15 @@ public class Baari {
 		/*
 		 * 5 yrityksen jalkeen while-looppi paattyy. Peli paattyy ja pelaajan tulokset seka tuloslista tulostetaan. Tuloslista tallennetaan tiedostoon.
 		 */
-		skanneri.close();
 		
 		System.out.println("******************************************************************************");
 		int raha = (int) Math.round((baarimikko.annaRaha()));
 		
 		if(raha>=0) {
-			System.out.println("The End. You got "+ raha +" coins "+iltojenMaara+" in the evening!");
+			System.out.println("The End. You got "+ raha +" coins in "+iltojenMaara+" evenings!");
 		}
 		else{
-			System.out.println("The End. You lost "+ Math.abs(raha) +" coins "+iltojenMaara+" in the evening!\n"
+			System.out.println("The End. You lost "+ Math.abs(raha) +" coins in "+iltojenMaara+" evenings!\n"
 					+ "Bar owner will be mad...");
 		}
 
@@ -133,7 +132,6 @@ public class Baari {
 			System.out.print("Do you want to serve the drink? (Y/N): ");
 			System.out.println("");	
 			String vastaus = skanneri2.next();
-			skanneri2.close();
 				
 				
 			if(vastaus.equals("Y") || vastaus.equals("y")) {
@@ -212,7 +210,6 @@ public class Baari {
 				System.out.println("Give the answer in the format: yes = Y, no = N!");
 			}
 		}
-		skanneri2.close();
 		return baarimikko.annaHealth();
 	}
 	/**
@@ -269,7 +266,6 @@ public class Baari {
 				tulos.lisaaJuomasekoitukseen(juoma);
 			}
 		}
-		skanneri2.close();
 		return tulos;
 	}
 	/**

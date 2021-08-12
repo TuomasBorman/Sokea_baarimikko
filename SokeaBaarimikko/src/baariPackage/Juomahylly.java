@@ -32,7 +32,7 @@ public class Juomahylly {
 	 */
 	Juoma annaJuoma(int juomavalinta) throws VaaraArvoPoikkeus {
 		if(juomavalinta>juomahylly.length-1) {
-			VaaraArvoPoikkeus e = new VaaraArvoPoikkeus("Kyseinen paikka hyllyssa on tyhja!");
+			VaaraArvoPoikkeus e = new VaaraArvoPoikkeus("There is no bottle there!");
 			throw e;
 		}
 		else {
